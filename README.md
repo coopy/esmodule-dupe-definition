@@ -53,9 +53,9 @@ Object.keys(_Foo).forEach(function (key) {
 ```
 
 `Object.defineProperty` is supposed to set `enumerable` in the property
-descriptor to `false` by default, but for some reason, when running the
-transpiled code through Jest, `forEach` enumerates over `__esModule` in `_Foo`
-anyway.
+descriptor to `false` by default ([reference][]), but for some reason, when
+running the transpiled code through Jest, `forEach` enumerates over `__esModule`
+in `_Foo` anyway.
 
 Note that transpiling via `babel-cli` and running the code does not reproduce
 the issue:
@@ -64,3 +64,5 @@ the issue:
 $ npm run build
 $ node lib/main.js
 ```
+
+[reference]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
