@@ -1,7 +1,7 @@
 Duplicate `__esModule` definition
 =================================
 
-To reproduce:
+## To reproduce
 
 ```
 $ npm install
@@ -64,5 +64,11 @@ the issue:
 $ npm run build
 $ node lib/main.js
 ```
+
+## Update
+
+[@tals correctly identified](https://github.com/facebook/jest/issues/880) that
+this is a problem with how Jest mocks the underlying module: property
+`enumerable` descriptors are not heeded.
 
 [reference]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
