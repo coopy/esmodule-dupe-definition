@@ -4,7 +4,8 @@
   "description": "Reproduce an issue with `export * from 'foo'` where in transpiled code, foo.__esModule is already defined.",
   "main": "lib/main.js",
   "scripts": {
-    "build": "babel src --out-dir lib"
+    "build": "babel src --out-dir lib",
+    "test": "jest"
   },
   "dependencies": {},
   "devDependencies": {

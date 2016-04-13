@@ -1,5 +1,3 @@
-import { CONSTANT } from './constants_passthrough';
+import { run } from './module';
 
-export const run = () => {
-    console.log(CONSTANT);
-}
+run();
